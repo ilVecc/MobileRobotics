@@ -1,0 +1,1228 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<robot name="rbkairos">
+  <material name="black">
+    <color rgba="0 0 0 1" />
+  </material>
+  <material name="LightGrey">
+    <color rgba="0.7 0.7 0.7 1" />
+  </material>
+  <material name="aluminum">
+    <color rgba="0.5 0.5 0.5 1" />
+  </material>
+  <material name="Grey">
+    <color rgba="0.7 0.7 0.7 1" />
+  </material>
+  <material name="light_grey">
+    <color rgba="0.8 0.8 0.8 0.8" />
+  </material>
+  <material name="Default-Material">
+    <color rgba="1 1 1 1" />
+  </material>
+  <material name="Material_002">
+    <color rgba="0.651 0.651 0.651 1" />
+  </material>
+  <material name="darkgrey">
+    <color rgba="0.2 0.2 0.2 1" />
+  </material>
+  <link name="summit_xl_base_footprint">
+    <visual>
+      <geometry>
+        <box size="0.001 0.001 0.001" />
+      </geometry>
+    </visual>
+  </link>
+  <link name="summit_xl_base_link">
+    <inertial>
+      <origin rpy="0 0 0" xyz="0 0 0" />
+      <mass value="125" />
+      <inertia ixx="1.39100027084351" ixy="0.00399968819692731" ixz="7.62905405515824E-10" iyy="6.85300064086914" iyz="1.04141383872047E-06" izz="6.12500143051147" />
+    </inertial>
+    <visual>
+      <geometry>
+        <mesh filename="package://meshes/summit_xls_chassis.stl" scale="1 1 1" />
+      </geometry>
+      <material name="black">
+        <color rgba="0 0 0 1" />
+      </material>
+    </visual>
+    <collision>
+      <geometry>
+        <mesh filename="package://meshes/summit_xls_chassis.stl" scale="1 1 1" />
+      </geometry>
+    </collision>
+  </link>
+  <link name="summit_xl_arm_base_link">
+    <inertial>
+      <origin rpy="0 0 0" xyz="0 0 0" />
+      <mass value="4" />
+      <inertia ixx="0.00443333154544234" ixy="0" ixz="0" iyy="0.00443333154544234" iyz="0" izz="0.00720000034198165" />
+    </inertial>
+    <visual>
+      <origin rpy="0 0 -3.141593" />
+      <geometry>
+        <mesh filename="package://meshes/base.stl" scale="1 1 1" />
+      </geometry>
+      <material name="LightGrey">
+        <color rgba="0.7 0.7 0.7 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin rpy="0 0 -3.141593" />
+      <geometry>
+        <mesh filename="package://meshes/base.stl" scale="1 1 1" />
+      </geometry>
+    </collision>
+  </link>
+  <link name="summit_xl_arm_base" />
+  <link name="summit_xl_arm_shoulder_link">
+    <inertial>
+      <origin rpy="0 0 0" xyz="0 0 0" />
+      <mass value="3.7000000477" />
+      <inertia ixx="0.0149723524227738" ixy="0" ixz="0" iyy="0.0149723524227738" iyz="0" izz="0.0104062501341105" />
+    </inertial>
+    <visual>
+      <origin rpy="0 0 -3.141593" />
+      <geometry>
+        <mesh filename="package://meshes/shoulder.stl" scale="1 1 1" />
+      </geometry>
+      <material name="LightGrey">
+        <color rgba="0.7 0.7 0.7 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin rpy="0 0 -3.141593" />
+      <geometry>
+        <mesh filename="package://meshes/shoulder.stl" scale="1 1 1" />
+      </geometry>
+    </collision>
+  </link>
+  <link name="summit_xl_arm_upper_arm_link">
+    <inertial>
+      <origin rpy="90 0 0" xyz="-0.212677 0 0.136" />
+      <mass value="8.392999649" />
+      <inertia ixx="0.0151074035093188" ixy="0" ixz="1.59872453053822E-08" iyy="0.134096533060074" iyz="0" izz="0.134096562862396" />
+    </inertial>
+    <visual>
+      <origin rpy="-4.712389 0 -1.570796" xyz="0 0 0.136" />
+      <geometry>
+        <mesh filename="package://meshes/upperarm.stl" scale="1 1 1" />
+      </geometry>
+      <material name="LightGrey">
+        <color rgba="0.7 0.7 0.7 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin rpy="-4.712389 0 -1.570796" xyz="0 0 0.136" />
+      <geometry>
+        <mesh filename="package://meshes/upperarm.stl" scale="1 1 1" />
+      </geometry>
+    </collision>
+  </link>
+  <link name="summit_xl_arm_forearm_link">
+    <inertial>
+      <origin rpy="90 0 0" xyz="-0.212677 0 0.0165" />
+      <mass value="2.2750000954" />
+      <inertia ixx="0.00409500114619732" ixy="0" ixz="3.64204244540645E-09" iyy="0.0312018245458603" iyz="0" izz="0.0312018319964409" />
+    </inertial>
+    <visual>
+      <origin rpy="-4.712389 0 -1.570796" xyz="0 0 0.0165" />
+      <geometry>
+        <mesh filename="package://meshes/forearm.stl" scale="1 1 1" />
+      </geometry>
+      <material name="LightGrey">
+        <color rgba="0.7 0.7 0.7 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin rpy="-4.712389 0 -1.570796" xyz="0 0 0.0165" />
+      <geometry>
+        <mesh filename="package://meshes/forearm.stl" scale="1 1 1" />
+      </geometry>
+    </collision>
+  </link>
+  <link name="summit_xl_arm_wrist_1_link">
+    <inertial>
+      <origin rpy="0 0 0" xyz="0 0 0" />
+      <mass value="1.2189999819" />
+      <inertia ixx="0.00262777809984982" ixy="0" ixz="0" iyy="0.00262777809984982" iyz="0" izz="0.00342843728139997" />
+    </inertial>
+    <visual>
+      <origin rpy="-4.712389 0 0" xyz="0 0 -0.093" />
+      <geometry>
+        <mesh filename="package://meshes/wrist1.stl" scale="1 1 1" />
+      </geometry>
+      <material name="LightGrey">
+        <color rgba="0.7 0.7 0.7 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin rpy="-4.712389 0 0" xyz="0 0 -0.093" />
+      <geometry>
+        <mesh filename="package://meshes/wrist1.stl" scale="1 1 1" />
+      </geometry>
+    </collision>
+  </link>
+  <link name="summit_xl_arm_wrist_2_link">
+    <inertial>
+      <origin rpy="0 0 0" xyz="0 0 0" />
+      <mass value="1.2189999819" />
+      <inertia ixx="0.00178970640990883" ixy="0" ixz="0" iyy="0.00178970640990883" iyz="0" izz="0.00219419994391501" />
+    </inertial>
+    <visual>
+      <origin xyz="0 0 -0.095" />
+      <geometry>
+        <mesh filename="package://meshes/wrist2.stl" scale="1 1 1" />
+      </geometry>
+      <material name="LightGrey">
+        <color rgba="0.7 0.7 0.7 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 0 -0.095" />
+      <geometry>
+        <mesh filename="package://meshes/wrist2.stl" scale="1 1 1" />
+      </geometry>
+    </collision>
+  </link>
+  <link name="summit_xl_arm_wrist_3_link">
+    <inertial>
+      <origin rpy="0 0 0" xyz="0 0 -0.01525" />
+      <mass value="0.1879000068" />
+      <inertia ixx="8.0624726251699E-05" ixy="0" ixz="0" iyy="8.0624726251699E-05" iyz="0" izz="0.000132117187604308" />
+    </inertial>
+    <visual>
+      <origin rpy="-4.712389 0 0" xyz="0 0 -0.0818" />
+      <geometry>
+        <mesh filename="package://meshes/wrist3.stl" scale="1 1 1" />
+      </geometry>
+      <material name="LightGrey">
+        <color rgba="0.7 0.7 0.7 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin rpy="-4.712389 0 0" xyz="0 0 -0.0823" />
+      <geometry>
+        <mesh filename="package://meshes/wrist3.stl" scale="1 1 1" />
+      </geometry>
+    </collision>
+  </link>
+  <link name="summit_xl_arm_tool0" />
+  <link name="summit_xl_wrist_rgbd_camera_link">
+    <inertial>
+      <origin rpy="0 0 0" xyz="0 0 0" />
+      <mass value="0.5640000105" />
+      <inertia ixx="0.003881243057549" ixy="0" ixz="0" iyy="0.000498940004035831" iyz="0" izz="0.00387925724498928" />
+    </inertial>
+    <visual>
+      <geometry>
+        <mesh filename="package://meshes/intel_realsense_depth_camera_d435.stl" scale="1 0.999999 1.000001" />
+      </geometry>
+      <material name="aluminum">
+        <color rgba="0.5 0.5 0.5 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="-0.0125 0 0" />
+      <geometry>
+        <box size="0.025 0.1 0.025" />
+      </geometry>
+    </collision>
+  </link>
+  <link name="summit_xl_wrist_rgbd_camera_depth_frame" />
+  <link name="summit_xl_wrist_rgbd_camera_fisheye_frame" />
+  <link name="summit_xl_wrist_rgbd_camera_fisheye_optical_frame" />
+  <link name="summit_xl_wrist_rgbd_camera_right_ir_frame" />
+  <link name="summit_xl_wrist_rgbd_camera_right_ir_optical_frame" />
+  <link name="summit_xl_wrist_rgbd_camera_left_ir_frame" />
+  <link name="summit_xl_wrist_rgbd_camera_left_ir_optical_frame" />
+  <link name="summit_xl_wrist_rgbd_camera_depth_optical_frame" />
+  <link name="summit_xl_wrist_rgbd_support_link">
+    <inertial>
+      <origin rpy="0 0 0" xyz="0 0 0.5" />
+      <mass value="1" />
+      <inertia ixx="100" ixy="0" ixz="0" iyy="100" iyz="0" izz="100" />
+    </inertial>
+    <visual>
+      <origin xyz="0.0105 0 0.001" />
+      <geometry>
+        <box size="0.084 0.063 0.002" />
+      </geometry>
+    </visual>
+    <collision>
+      <origin xyz="0.0105 0 0.001" />
+      <geometry>
+        <box size="0.084 0.063 0.002" />
+      </geometry>
+    </collision>
+  </link>
+  <link name="summit_xl_wrist_rgbd_support_second_link">
+    <inertial>
+      <origin rpy="0 0 0" xyz="0 0 0.5" />
+      <mass value="1" />
+      <inertia ixx="100" ixy="0" ixz="0" iyy="100" iyz="0" izz="100" />
+    </inertial>
+    <visual>
+      <origin rpy="0 1.570796 0" xyz="0 0 0.019" />
+      <geometry>
+        <box size="0.036 0.063 0.002" />
+      </geometry>
+    </visual>
+    <collision>
+      <origin rpy="0 1.570796 0" xyz="0 0 0.021" />
+      <geometry>
+        <box size="0.04 0.063 0.002" />
+      </geometry>
+    </collision>
+  </link>
+  <link name="summit_xl_wsg50_support_link">
+    <inertial>
+      <origin rpy="0 0 0" xyz="0 0 0.5" />
+      <mass value="1" />
+      <inertia ixx="100" ixy="0" ixz="0" iyy="100" iyz="0" izz="100" />
+    </inertial>
+    <visual>
+      <geometry>
+        <box size="0.05 0.125 0.01" />
+      </geometry>
+    </visual>
+    <collision>
+      <geometry>
+        <box size="0.05 0.125 0.01" />
+      </geometry>
+    </collision>
+  </link>
+  <link name="summit_xl_wsg50_base_link">
+    <inertial>
+      <origin rpy="0 0 0" xyz="0 0 0" />
+      <mass value="0.25" />
+      <inertia ixx="1" ixy="0" ixz="0" iyy="1" iyz="0" izz="1" />
+    </inertial>
+    <visual>
+      <geometry>
+        <mesh filename="package://meshes/WSG50_110.stl" scale="1 0.999996 1.000004" />
+      </geometry>
+      <material name="Grey">
+        <color rgba="0.7 0.7 0.7 1" />
+      </material>
+    </visual>
+    <collision>
+      <geometry>
+        <mesh filename="package://meshes/WSG50_110.stl" scale="1 0.999996 1.000004" />
+      </geometry>
+    </collision>
+  </link>
+  <link name="summit_xl_wsg50_gripper_right">
+    <inertial>
+      <origin rpy="0 0 0" xyz="0 0 0" />
+      <mass value="0.1000000015" />
+      <inertia ixx="1" ixy="0" ixz="0" iyy="1" iyz="0" izz="1" />
+    </inertial>
+    <visual>
+      <geometry>
+        <mesh filename="package://meshes/GUIDE_WSG50_110.stl" scale="0.001 0.001 0.001" />
+      </geometry>
+      <material name="black">
+        <color rgba="0 0 0 1" />
+      </material>
+    </visual>
+    <collision>
+      <geometry>
+        <mesh filename="package://meshes/GUIDE_WSG50_110.stl" scale="0.001 0.001 0.001" />
+      </geometry>
+    </collision>
+  </link>
+  <link name="summit_xl_wsg50_finger_right">
+    <inertial>
+      <origin rpy="0 0 0" xyz="0 0 0" />
+      <mass value="0.1000000015" />
+      <inertia ixx="1" ixy="0" ixz="0" iyy="1" iyz="0" izz="1" />
+    </inertial>
+    <visual>
+      <geometry>
+        <mesh filename="package://meshes/WSG-FMF.stl" scale="0.001 0.001 0.001" />
+      </geometry>
+      <material name="black">
+        <color rgba="0 0 0 1" />
+      </material>
+    </visual>
+    <collision>
+      <geometry>
+        <mesh filename="package://meshes/WSG-FMF.stl" scale="0.001 0.001 0.001" />
+      </geometry>
+    </collision>
+  </link>
+  <link name="summit_xl_wsg50_gripper_left">
+    <inertial>
+      <origin rpy="0 0 0" xyz="0 0 0" />
+      <mass value="0.1000000015" />
+      <inertia ixx="1" ixy="0" ixz="0" iyy="1" iyz="0" izz="1" />
+    </inertial>
+    <visual>
+      <geometry>
+        <mesh filename="package://meshes/GUIDE_WSG50_110.stl" scale="0.001 0.001 0.001" />
+      </geometry>
+      <material name="black">
+        <color rgba="0 0 0 1" />
+      </material>
+    </visual>
+    <collision>
+      <geometry>
+        <mesh filename="package://meshes/GUIDE_WSG50_110.stl" scale="0.001 0.001 0.001" />
+      </geometry>
+    </collision>
+  </link>
+  <link name="summit_xl_wsg50_finger_left">
+    <inertial>
+      <origin rpy="0 0 0" xyz="0 0 0" />
+      <mass value="0.1000000015" />
+      <inertia ixx="1" ixy="0" ixz="0" iyy="1" iyz="0" izz="1" />
+    </inertial>
+    <visual>
+      <geometry>
+        <mesh filename="package://meshes/WSG-FMF.stl" scale="0.001 0.001 0.001" />
+      </geometry>
+      <material name="black">
+        <color rgba="0 0 0 1" />
+      </material>
+    </visual>
+    <collision>
+      <geometry>
+        <mesh filename="package://meshes/WSG-FMF.stl" scale="0.001 0.001 0.001" />
+      </geometry>
+    </collision>
+  </link>
+  <link name="summit_xl_wsg50_center" />
+  <link name="summit_xl_arm_ee_link">
+    <collision>
+      <origin xyz="-0.01 0 0" />
+      <geometry>
+        <box size="0.01 0.01 0.01" />
+      </geometry>
+    </collision>
+  </link>
+  <link name="summit_xl_front_rgbd_camera_rgb_base_link">
+    <inertial>
+      <origin rpy="0 0 0" xyz="0 0 0" />
+      <mass value="0.001" />
+      <inertia ixx="9.99999974737875E-05" ixy="0" ixz="0" iyy="9.99999974737875E-05" iyz="0" izz="9.99999974737875E-05" />
+    </inertial>
+  </link>
+  <link name="summit_xl_front_rgbd_camera_link">
+    <inertial>
+      <origin rpy="0 0 0" xyz="0 0 0" />
+      <mass value="0.5640000105" />
+      <inertia ixx="0.003881243057549" ixy="0" ixz="0" iyy="0.000498940004035831" iyz="0" izz="0.00387925724498928" />
+    </inertial>
+    <visual>
+      <geometry>
+        <mesh filename="package://meshes/zed.stl" scale="1 1 1" />
+      </geometry>
+      <material name="light_grey">
+        <color rgba="0.8 0.8 0.8 0.8" />
+      </material>
+    </visual>
+    <collision>
+      <geometry>
+        <mesh filename="package://meshes/zed.stl" scale="1 1 1" />
+      </geometry>
+    </collision>
+  </link>
+  <link name="summit_xl_front_rgbd_camera_right_rgb_frame" />
+  <link name="summit_xl_front_rgbd_camera_right_rgb_optical_frame" />
+  <link name="summit_xl_front_rgbd_camera_left_rgb_frame" />
+  <link name="summit_xl_front_rgbd_camera_left_rgb_optical_frame" />
+  <link name="summit_xl_rear_laser_base_link">
+    <inertial>
+      <origin rpy="0 0 0" xyz="0 0 0" />
+      <mass value="1E-05" />
+      <inertia ixx="9.99999997475243E-07" ixy="0" ixz="0" iyy="9.99999997475243E-07" iyz="0" izz="9.99999997475243E-07" />
+    </inertial>
+    <visual>
+      <geometry>
+        <mesh filename="package://meshes/sick_s300.stl" scale="1 1 1" />
+      </geometry>
+      <material name="Default-Material">
+        <color rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <geometry>
+        <mesh filename="package://meshes/sick_s300.stl" scale="1 1 1" />
+      </geometry>
+    </collision>
+  </link>
+  <link name="summit_xl_rear_laser_link" />
+  <link name="summit_xl_front_laser_base_link">
+    <inertial>
+      <origin rpy="0 0 0" xyz="0 0 0" />
+      <mass value="1E-05" />
+      <inertia ixx="9.99999997475243E-07" ixy="0" ixz="0" iyy="9.99999997475243E-07" iyz="0" izz="9.99999997475243E-07" />
+    </inertial>
+    <visual>
+      <geometry>
+        <mesh filename="package://meshes/sick_s300.stl" scale="1 1 1" />
+      </geometry>
+      <material name="Default-Material">
+        <color rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <geometry>
+        <mesh filename="package://meshes/sick_s300.stl" scale="1 1 1" />
+      </geometry>
+    </collision>
+  </link>
+  <link name="summit_xl_front_laser_link" />
+  <link name="summit_xl_imu_link">
+    <inertial>
+      <origin rpy="0 0 0" xyz="0 0 0" />
+      <mass value="0.001" />
+      <inertia ixx="9.99999974737875E-05" ixy="0" ixz="0" iyy="9.99999997475243E-07" iyz="0" izz="9.99999974737875E-05" />
+    </inertial>
+    <visual>
+      <geometry>
+        <box size="0.001 0.001 0.001" />
+      </geometry>
+    </visual>
+    <collision>
+      <geometry>
+        <box size="0.001 0.001 0.001" />
+      </geometry>
+    </collision>
+  </link>
+  <link name="summit_xl_front_right_wheel_link">
+    <inertial>
+      <origin rpy="0 0 0" xyz="0 0 0" />
+      <mass value="6.5" />
+      <inertia ixx="0.0303095020353794" ixy="0" ixz="0" iyy="0.0524192489683628" iyz="0" izz="0.0303095020353794" />
+    </inertial>
+    <visual>
+      <geometry>
+        <mesh filename="package://meshes/omni_wheel_2.stl" scale="1 1 1" />
+      </geometry>
+      <material name="Material_002">
+        <color rgba="0.651 0.651 0.651 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin rpy="-4.712389 0 0" />
+      <geometry>
+        <sphere radius="0.127" />
+      </geometry>
+    </collision>
+  </link>
+  <link name="summit_xl_front_left_wheel_link">
+    <inertial>
+      <origin rpy="0 0 0" xyz="0 0 0" />
+      <mass value="6.5" />
+      <inertia ixx="0.0303095020353794" ixy="0" ixz="0" iyy="0.0524192489683628" iyz="0" izz="0.0303095020353794" />
+    </inertial>
+    <visual>
+      <geometry>
+        <mesh filename="package://meshes/omni_wheel_1.stl" scale="1 1 1" />
+      </geometry>
+      <material name="Material_002">
+        <color rgba="0.651 0.651 0.651 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin rpy="-4.712389 0 0" />
+      <geometry>
+        <sphere radius="0.127" />
+      </geometry>
+    </collision>
+  </link>
+  <link name="summit_xl_back_right_wheel_link">
+    <inertial>
+      <origin rpy="0 0 0" xyz="0 0 0" />
+      <mass value="6.5" />
+      <inertia ixx="0.0303095020353794" ixy="0" ixz="0" iyy="0.0524192489683628" iyz="0" izz="0.0303095020353794" />
+    </inertial>
+    <visual>
+      <geometry>
+        <mesh filename="package://meshes/omni_wheel_1.stl" scale="1 1 1" />
+      </geometry>
+      <material name="Material_002">
+        <color rgba="0.651 0.651 0.651 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin rpy="-4.712389 0 0" />
+      <geometry>
+        <sphere radius="0.127" />
+      </geometry>
+    </collision>
+  </link>
+  <link name="summit_xl_back_left_wheel_link">
+    <inertial>
+      <origin rpy="0 0 0" xyz="0 0 0" />
+      <mass value="6.5" />
+      <inertia ixx="0.0303095020353794" ixy="0" ixz="0" iyy="0.0524192489683628" iyz="0" izz="0.0303095020353794" />
+    </inertial>
+    <visual>
+      <geometry>
+        <mesh filename="package://meshes/omni_wheel_2.stl" scale="1 1 1" />
+      </geometry>
+      <material name="Material_002">
+        <color rgba="0.651 0.651 0.651 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin rpy="-4.712389 0 0" />
+      <geometry>
+        <sphere radius="0.127" />
+      </geometry>
+    </collision>
+  </link>
+  <link name="summit_xl_base_docking_contact" />
+  <link name="summit_xl_base_logo_rear">
+    <visual>
+      <geometry>
+        <mesh filename="package://meshes/robotnik_logo_chasis.stl" scale="1 1 1" />
+      </geometry>
+      <material name="darkgrey">
+        <color rgba="0.2 0.2 0.2 1" />
+      </material>
+    </visual>
+  </link>
+  <link name="summit_xl_base_logo_front">
+    <visual>
+      <geometry>
+        <mesh filename="package://meshes/robotnik_logo_chasis.stl" scale="1 1 1" />
+      </geometry>
+      <material name="darkgrey">
+        <color rgba="0.2 0.2 0.2 1" />
+      </material>
+    </visual>
+  </link>
+  <link name="summit_xl_base_logo_right">
+    <visual>
+      <geometry>
+        <mesh filename="package://meshes/robotnik_logo_chasis.stl" scale="1 1 1" />
+      </geometry>
+      <material name="darkgrey">
+        <color rgba="0.2 0.2 0.2 1" />
+      </material>
+    </visual>
+  </link>
+  <link name="summit_xl_base_logo_left">
+    <visual>
+      <geometry>
+        <mesh filename="package://meshes/robotnik_logo_chasis.stl" scale="1 1 1" />
+      </geometry>
+      <material name="darkgrey">
+        <color rgba="0.2 0.2 0.2 1" />
+      </material>
+    </visual>
+  </link>
+  <link name="summit_xl_base_chapa">
+    <visual>
+      <geometry>
+        <mesh filename="package://meshes/summit_xls_chapas_inox_tapas.stl" scale="1 1 1" />
+      </geometry>
+      <material name="darkgrey">
+        <color rgba="0.2 0.2 0.2 1" />
+      </material>
+    </visual>
+  </link>
+  <link name="base_scan_link">
+    <inertial>
+      <origin rpy="0 0 0" xyz="0 0 0" />
+      <mass value="1E-05" />
+      <inertia ixx="1" ixy="0" ixz="0" iyy="1" iyz="0" izz="1" />
+    </inertial>
+  </link>
+  <link name="base_scan" />
+  <joint name="summit_xl_base_footprint_joint" type="fixed">
+    <origin xyz="0 0 0.127" />
+    <parent link="summit_xl_base_footprint" />
+    <child link="summit_xl_base_link" />
+  </joint>
+  <joint name="summit_xl_arm_base_joint" type="fixed">
+    <origin rpy="0 0 -3.141593" xyz="0.1883 0 0.38212" />
+    <parent link="summit_xl_base_link" />
+    <child link="summit_xl_arm_base_link" />
+  </joint>
+  <joint name="summit_xl_arm_base_link-base_fixed_joint" type="fixed">
+    <origin rpy="0 0 -3.141593" />
+    <parent link="summit_xl_arm_base_link" />
+    <child link="summit_xl_arm_base" />
+  </joint>
+  <joint name="summit_xl_arm_shoulder_pan_joint" type="revolute">
+    <origin rpy="0 0 -3.141593" xyz="0 0 0.08912" />
+    <parent link="summit_xl_arm_base_link" />
+    <child link="summit_xl_arm_shoulder_link" />
+    <limit lower="-3.14159262925386" upper="3.14159262925386" effort="150" velocity="7" />
+  </joint>
+  <joint name="summit_xl_arm_shoulder_lift_joint" type="revolute">
+    <origin rpy="-4.714052 0.209274 -0.000376" xyz="0.000232 0 0" />
+    <parent link="summit_xl_arm_shoulder_link" />
+    <child link="summit_xl_arm_upper_arm_link" />
+    <limit lower="-3.14159262925386" upper="3.14159262925386" effort="150" velocity="7" />
+  </joint>
+  <joint name="summit_xl_arm_elbow_joint" type="revolute">
+    <origin rpy="-0.002309 6.281587 -2.676124" xyz="-0.425354 0 0" />
+    <parent link="summit_xl_arm_upper_arm_link" />
+    <child link="summit_xl_arm_forearm_link" />
+    <limit lower="-3.14159262925386" upper="3.14159262925386" effort="150" velocity="7" />
+  </joint>
+  <joint name="summit_xl_arm_wrist_1_joint" type="revolute">
+    <origin rpy="-6.279414 0.002304 -0.23345" xyz="-0.392149 -0.000466 0.11099" />
+    <parent link="summit_xl_arm_forearm_link" />
+    <child link="summit_xl_arm_wrist_1_link" />
+    <limit lower="-3.14159262925386" upper="3.14159262925386" effort="28" velocity="7" />
+  </joint>
+  <joint name="summit_xl_arm_wrist_2_joint" type="revolute">
+    <origin rpy="0 4.712389 -4.725339" xyz="-1.3E-05 -0.094833 6.9E-05" />
+    <parent link="summit_xl_arm_wrist_1_link" />
+    <child link="summit_xl_arm_wrist_2_link" />
+    <limit lower="-3.14159262925386" upper="3.14159262925386" effort="28" velocity="7" />
+  </joint>
+  <joint name="summit_xl_arm_wrist_3_joint" type="revolute">
+    <origin rpy="0 4.712389 -1.566852" xyz="6.1E-05 0.082572 1.1E-05" />
+    <parent link="summit_xl_arm_wrist_2_link" />
+    <child link="summit_xl_arm_wrist_3_link" />
+    <limit lower="-3.14159262925386" upper="3.14159262925386" effort="28" velocity="7" />
+  </joint>
+  <joint name="summit_xl_arm_wrist_3_passive_joint" type="fixed">
+    <parent link="summit_xl_arm_wrist_3_link" />
+    <child link="summit_xl_arm_tool0" />
+  </joint>
+  <joint name="summit_xl_wrist_rgbd_camera_joint" type="fixed">
+    <origin rpy="0 4.712389 -3.141593" xyz="0.0515 0 0.065" />
+    <parent link="summit_xl_arm_tool0" />
+    <child link="summit_xl_wrist_rgbd_camera_link" />
+  </joint>
+  <joint name="summit_xl_wrist_rgbd_camera_depth_joint" type="fixed">
+    <origin xyz="0 -0.0115 0" />
+    <parent link="summit_xl_wrist_rgbd_camera_link" />
+    <child link="summit_xl_wrist_rgbd_camera_depth_frame" />
+  </joint>
+  <joint name="summit_xl_wrist_rgbd_camera_fisheye_joint" type="fixed">
+    <origin xyz="0 0.044 0" />
+    <parent link="summit_xl_wrist_rgbd_camera_depth_frame" />
+    <child link="summit_xl_wrist_rgbd_camera_fisheye_frame" />
+  </joint>
+  <joint name="summit_xl_wrist_rgbd_camera_fisheye_optical_joint" type="fixed">
+    <origin rpy="-1.570796 0 -1.570796" />
+    <parent link="summit_xl_wrist_rgbd_camera_fisheye_frame" />
+    <child link="summit_xl_wrist_rgbd_camera_fisheye_optical_frame" />
+  </joint>
+  <joint name="summit_xl_wrist_rgbd_camera_right_ir_joint" type="fixed">
+    <origin xyz="0 0.029 0" />
+    <parent link="summit_xl_wrist_rgbd_camera_depth_frame" />
+    <child link="summit_xl_wrist_rgbd_camera_right_ir_frame" />
+  </joint>
+  <joint name="summit_xl_wrist_rgbd_camera_right_ir_optical_joint" type="fixed">
+    <origin rpy="-1.570796 0 -1.570796" />
+    <parent link="summit_xl_wrist_rgbd_camera_right_ir_frame" />
+    <child link="summit_xl_wrist_rgbd_camera_right_ir_optical_frame" />
+  </joint>
+  <joint name="summit_xl_wrist_rgbd_camera_left_ir_joint" type="fixed">
+    <origin xyz="0 -0.021 0" />
+    <parent link="summit_xl_wrist_rgbd_camera_depth_frame" />
+    <child link="summit_xl_wrist_rgbd_camera_left_ir_frame" />
+  </joint>
+  <joint name="summit_xl_wrist_rgbd_camera_left_ir_optical_joint" type="fixed">
+    <origin rpy="-1.570796 0 -1.570796" />
+    <parent link="summit_xl_wrist_rgbd_camera_left_ir_frame" />
+    <child link="summit_xl_wrist_rgbd_camera_left_ir_optical_frame" />
+  </joint>
+  <joint name="summit_xl_wrist_rgbd_camera_depth_optical_joint" type="fixed">
+    <origin rpy="-1.570796 0 -1.570796" />
+    <parent link="summit_xl_wrist_rgbd_camera_depth_frame" />
+    <child link="summit_xl_wrist_rgbd_camera_depth_optical_frame" />
+  </joint>
+  <joint name="summit_xl_wrist_rgbd_support_joint" type="fixed">
+    <parent link="summit_xl_arm_tool0" />
+    <child link="summit_xl_wrist_rgbd_support_link" />
+  </joint>
+  <joint name="summit_xl_wrist_rgbd_support_second_joint" type="fixed">
+    <origin xyz="0.0515 0 0.001" />
+    <parent link="summit_xl_wrist_rgbd_support_link" />
+    <child link="summit_xl_wrist_rgbd_support_second_link" />
+  </joint>
+  <joint name="summit_xl_wsg50_support_joint" type="fixed">
+    <origin xyz="0 -0.01 0.007" />
+    <parent link="summit_xl_wrist_rgbd_support_link" />
+    <child link="summit_xl_wsg50_support_link" />
+  </joint>
+  <joint name="summit_xl_wsg50_anterior_gripper_joint" type="fixed">
+    <origin rpy="0 0 -4.712389" xyz="0 0.01 0.005" />
+    <parent link="summit_xl_wsg50_support_link" />
+    <child link="summit_xl_wsg50_base_link" />
+  </joint>
+  <joint name="summit_xl_wsg50_finger_right_joint" type="prismatic">
+    <origin rpy="0 0 -3.141595" />
+    <parent link="summit_xl_wsg50_base_link" />
+    <child link="summit_xl_wsg50_gripper_right" />
+    <dynamics damping="100" friction="100" />
+    <limit lower="0.00270000007003546" upper="0.0549999997019768" effort="1" velocity="100" />
+  </joint>
+  <joint name="summit_xl_wsg50_guide_joint_finger_right" type="fixed">
+    <origin xyz="0 0 0.023" />
+    <parent link="summit_xl_wsg50_gripper_right" />
+    <child link="summit_xl_wsg50_finger_right" />
+  </joint>
+  <joint name="summit_xl_wsg50_finger_left_joint" type="prismatic">
+    <parent link="summit_xl_wsg50_base_link" />
+    <child link="summit_xl_wsg50_gripper_left" />
+    <dynamics damping="100" friction="100" />
+    <limit lower="-0.0549999997019768" upper="-0.00270000007003546" effort="1" velocity="100" />
+  </joint>
+  <joint name="summit_xl_wsg50_guide_joint_finger_left" type="fixed">
+    <origin xyz="0 0 0.023" />
+    <parent link="summit_xl_wsg50_gripper_left" />
+    <child link="summit_xl_wsg50_finger_left" />
+  </joint>
+  <joint name="summit_xl_wsg50_center_joint" type="fixed">
+    <origin xyz="0 0 0.023" />
+    <parent link="summit_xl_wsg50_base_link" />
+    <child link="summit_xl_wsg50_center" />
+  </joint>
+  <joint name="summit_xl_arm_ee_fixed_joint" type="fixed">
+    <origin rpy="0 4.712389 -4.712389" />
+    <parent link="summit_xl_arm_wrist_3_link" />
+    <child link="summit_xl_arm_ee_link" />
+  </joint>
+  <joint name="summit_xl_front_rgbd_camera_rgb_joint" type="fixed">
+    <origin xyz="0.3585 0 0.25062" />
+    <parent link="summit_xl_base_link" />
+    <child link="summit_xl_front_rgbd_camera_rgb_base_link" />
+  </joint>
+  <joint name="summit_xl_front_rgbd_camera_joint" type="fixed">
+    <parent link="summit_xl_front_rgbd_camera_rgb_base_link" />
+    <child link="summit_xl_front_rgbd_camera_link" />
+  </joint>
+  <joint name="summit_xl_front_rgbd_camera_rgb_right_joint" type="fixed">
+    <origin xyz="0 -0.06 0" />
+    <parent link="summit_xl_front_rgbd_camera_link" />
+    <child link="summit_xl_front_rgbd_camera_right_rgb_frame" />
+  </joint>
+  <joint name="summit_xl_front_rgbd_camera_rgb_right_optical_joint" type="fixed">
+    <origin rpy="-1.570796 0 -1.570796" />
+    <parent link="summit_xl_front_rgbd_camera_right_rgb_frame" />
+    <child link="summit_xl_front_rgbd_camera_right_rgb_optical_frame" />
+  </joint>
+  <joint name="summit_xl_front_rgbd_camera_rgb_left_joint" type="fixed">
+    <origin xyz="0 0.06 0" />
+    <parent link="summit_xl_front_rgbd_camera_link" />
+    <child link="summit_xl_front_rgbd_camera_left_rgb_frame" />
+  </joint>
+  <joint name="summit_xl_front_rgbd_camera_rgb_left_optical_joint" type="fixed">
+    <origin rpy="-1.570796 0 -1.570796" />
+    <parent link="summit_xl_front_rgbd_camera_left_rgb_frame" />
+    <child link="summit_xl_front_rgbd_camera_left_rgb_optical_frame" />
+  </joint>
+  <joint name="summit_xl_rear_laser_base_joint" type="fixed">
+    <origin rpy="-3.141593 0 -3.926991" xyz="-0.2865 0.20894 0.2973" />
+    <parent link="summit_xl_base_link" />
+    <child link="summit_xl_rear_laser_base_link" />
+  </joint>
+  <joint name="summit_xl_rear_laser_joint" type="fixed">
+    <origin xyz="0 0 0.116" />
+    <parent link="summit_xl_rear_laser_base_link" />
+    <child link="summit_xl_rear_laser_link" />
+  </joint>
+  <joint name="summit_xl_front_laser_base_joint" type="fixed">
+    <origin rpy="-3.141593 0 -0.785398" xyz="0.2865 -0.20894 0.2973" />
+    <parent link="summit_xl_base_link" />
+    <child link="summit_xl_front_laser_base_link" />
+  </joint>
+  <joint name="summit_xl_front_laser_joint" type="fixed">
+    <origin xyz="0 0 0.116" />
+    <parent link="summit_xl_front_laser_base_link" />
+    <child link="summit_xl_front_laser_link" />
+  </joint>
+  <joint name="summit_xl_imu_joint" type="fixed">
+    <origin xyz="0.127 -0.129 0.212" />
+    <parent link="summit_xl_base_link" />
+    <child link="summit_xl_imu_link" />
+  </joint>
+  <joint name="summit_xl_front_right_wheel_joint" type="continuous">
+    <origin xyz="0.2225 -0.2045 0" />
+    <parent link="summit_xl_base_link" />
+    <child link="summit_xl_front_right_wheel_link" />
+  </joint>
+  <joint name="summit_xl_front_left_wheel_joint" type="continuous">
+    <origin xyz="0.2225 0.2045 0" />
+    <parent link="summit_xl_base_link" />
+    <child link="summit_xl_front_left_wheel_link" />
+  </joint>
+  <joint name="summit_xl_back_right_wheel_joint" type="continuous">
+    <origin xyz="-0.2225 -0.2045 0" />
+    <parent link="summit_xl_base_link" />
+    <child link="summit_xl_back_right_wheel_link" />
+  </joint>
+  <joint name="summit_xl_back_left_wheel_joint" type="continuous">
+    <origin xyz="-0.2225 0.2045 0" />
+    <parent link="summit_xl_base_link" />
+    <child link="summit_xl_back_left_wheel_link" />
+  </joint>
+  <joint name="summit_xl_base_docking_joint" type="fixed">
+    <origin xyz="0.35 0 0.09" />
+    <parent link="summit_xl_base_link" />
+    <child link="summit_xl_base_docking_contact" />
+  </joint>
+  <joint name="summit_xl_base_logo_rear_joint" type="fixed">
+    <origin rpy="0 0 -4.712389" xyz="-0.345 0 0" />
+    <parent link="summit_xl_base_link" />
+    <child link="summit_xl_base_logo_rear" />
+  </joint>
+  <joint name="summit_xl_base_logo_front_joint" type="fixed">
+    <origin rpy="0 0 -1.570796" xyz="0.345 0 0" />
+    <parent link="summit_xl_base_link" />
+    <child link="summit_xl_base_logo_front" />
+  </joint>
+  <joint name="summit_xl_base_logo_right_joint" type="fixed">
+    <origin rpy="0 0 -3.141593" xyz="0 -0.28931 0.29062" />
+    <parent link="summit_xl_base_link" />
+    <child link="summit_xl_base_logo_right" />
+  </joint>
+  <joint name="summit_xl_base_logo_left_joint" type="fixed">
+    <origin xyz="0 0.28931 0.29062" />
+    <parent link="summit_xl_base_link" />
+    <child link="summit_xl_base_logo_left" />
+  </joint>
+  <joint name="summit_xl_base_tapa_joint" type="fixed">
+    <origin xyz="0 0 0.38062" />
+    <parent link="summit_xl_base_link" />
+    <child link="summit_xl_base_chapa" />
+  </joint>
+  <joint name="base_scan_joint" type="fixed">
+    <parent link="summit_xl_base_link" />
+    <child link="base_scan_link" />
+  </joint>
+  <joint name="scan_joint" type="fixed">
+    <parent link="base_scan_link" />
+    <child link="base_scan" />
+  </joint>
+  <gazebo reference="base_footprint">
+  <material>Gazebo/Green</material>
+</gazebo>
+<gazebo>
+  <plugin filename="libgazebo_ros_control.so" name="ros_control">
+    <!--<robotNamespace>/summit_xl</robotNamespace>-->
+    <robotParam>robot_description</robotParam>
+    <controlPeriod>0.001</controlPeriod>
+    <robotSimType>gazebo_ros_control/DefaultRobotHWSim</robotSimType>
+    <legacyModeNS>true</legacyModeNS>
+  </plugin>
+</gazebo>
+<gazebo reference="summit_xl_base_link">
+  <material>Gazebo/Black</material>
+</gazebo>
+<transmission name="summit_xl_front_right_wheel_joint_trans">
+  <type>transmission_interface/SimpleTransmission</type>
+  <joint name="summit_xl_front_right_wheel_joint">
+    <hardwareInterface>hardware_interface/VelocityJointInterface</hardwareInterface>
+  </joint>
+  <actuator name="summit_xl_front_right_wheel_joint_motor">
+    <mechanicalReduction>1</mechanicalReduction>
+  </actuator>
+</transmission>
+<gazebo reference="summit_xl_front_right_wheel_link">
+  <mu1 value="1.0" />
+  <mu2 value="1.0" />
+  <kp value="10000000.0" />
+  <kd value="1.0" />
+  <fdir1 value="1 0 0" />
+  <turnGravityOff>false</turnGravityOff>
+</gazebo>
+<transmission name="summit_xl_front_left_wheel_joint_trans">
+  <type>transmission_interface/SimpleTransmission</type>
+  <joint name="summit_xl_front_left_wheel_joint">
+    <hardwareInterface>hardware_interface/VelocityJointInterface</hardwareInterface>
+  </joint>
+  <actuator name="summit_xl_front_left_wheel_joint_motor">
+    <mechanicalReduction>1</mechanicalReduction>
+  </actuator>
+</transmission>
+<gazebo reference="summit_xl_front_left_wheel_link">
+  <mu1 value="1.0" />
+  <mu2 value="1.0" />
+  <kp value="10000000.0" />
+  <kd value="1.0" />
+  <fdir1 value="1 0 0" />
+  <turnGravityOff>false</turnGravityOff>
+</gazebo>
+<transmission name="summit_xl_back_left_wheel_joint_trans">
+  <type>transmission_interface/SimpleTransmission</type>
+  <joint name="summit_xl_back_left_wheel_joint">
+    <hardwareInterface>hardware_interface/VelocityJointInterface</hardwareInterface>
+  </joint>
+  <actuator name="summit_xl_back_left_wheel_joint_motor">
+    <mechanicalReduction>1</mechanicalReduction>
+  </actuator>
+</transmission>
+<gazebo reference="summit_xl_back_left_wheel_link">
+  <mu1 value="1.0" />
+  <mu2 value="1.0" />
+  <kp value="10000000.0" />
+  <kd value="1.0" />
+  <fdir1 value="1 0 0" />
+  <turnGravityOff>false</turnGravityOff>
+</gazebo>
+<transmission name="summit_xl_back_right_wheel_joint_trans">
+  <type>transmission_interface/SimpleTransmission</type>
+  <joint name="summit_xl_back_right_wheel_joint">
+    <hardwareInterface>hardware_interface/VelocityJointInterface</hardwareInterface>
+  </joint>
+  <actuator name="summit_xl_back_right_wheel_joint_motor">
+    <mechanicalReduction>1</mechanicalReduction>
+  </actuator>
+</transmission>
+<gazebo reference="summit_xl_back_right_wheel_link">
+  <mu1 value="1.0" />
+  <mu2 value="1.0" />
+  <kp value="10000000.0" />
+  <kd value="1.0" />
+  <fdir1 value="1 0 0" />
+  <turnGravityOff>false</turnGravityOff>
+</gazebo>
+<gazebo>
+  <plugin filename="libhector_gazebo_ros_imu.so" name="summit_xl_imu_controller">
+    <alwaysOn>true</alwaysOn>
+    <topicName>imu/data</topicName>
+    <serviceName>summit_xl_imuimu/service</serviceName>
+    <bodyName>summit_xl_imu_link</bodyName>
+    <frameId>summit_xl_imu_link</frameId>
+    <updateRate>50.0</updateRate>
+    <gaussianNoise>0.00</gaussianNoise>
+    <yawOffset>0.0</yawOffset>
+    <yawDrift>0.0</yawDrift>
+    <yawGaussianNoise>0.0</yawGaussianNoise>
+    <!-- angular velocities parameters -->
+    <rateOffset>0.0 0.0 0.0</rateOffset>
+    <rateDrift>0.0 0.0 0.0</rateDrift>
+    <rateGaussianNoise>0.0 0.0 0.0</rateGaussianNoise>
+    <!-- linear accelerations parameters -->
+    <accelOffset>0.0 0.0 0.0</accelOffset>
+    <accelDrift>0.0 0.0 0.0</accelDrift>
+    <accelGaussianNoise>0.0 0.0 0.0</accelGaussianNoise>
+  </plugin>
+</gazebo>
+<gazebo reference="summit_xl_front_laser_link">
+  <sensor name="summit_xl_front_laser_sensor" type="gpu_ray">
+    <pose>0 0 0 0 0 0</pose>
+    <visualize>false</visualize>
+    <update_rate>12.5</update_rate>
+    <ray>
+      <scan>
+        <horizontal>
+          <samples>541</samples>
+          <resolution>1</resolution>
+          <min_angle>-2.3562</min_angle>
+          <max_angle>2.3562</max_angle>
+        </horizontal>
+      </scan>
+      <range>
+        <min>0.10</min>
+        <max>30.0</max>
+        <resolution>0.03</resolution>
+      </range>
+      <noise>
+        <type>gaussian</type>
+        <mean>0.0</mean>
+        <stddev>0.03</stddev>
+      </noise>
+    </ray>
+    <plugin filename="libgazebo_ros_gpu_laser.so" name="summit_xl_front_laser_controller">
+      <topicName>front_laser/scan</topicName>
+      <frameName>/summit_xl_front_laser_link</frameName>
+      <!-- if not global (leading /) sets the current namespace as a prefix (/ns/name_laser_link) -->
+    </plugin>
+  </sensor>
+</gazebo>
+<gazebo reference="summit_xl_rear_laser_link">
+  <sensor name="summit_xl_rear_laser_sensor" type="gpu_ray">
+    <pose>0 0 0 0 0 0</pose>
+    <visualize>false</visualize>
+    <update_rate>12.5</update_rate>
+    <ray>
+      <scan>
+        <horizontal>
+          <samples>541</samples>
+          <resolution>1</resolution>
+          <min_angle>-2.3562</min_angle>
+          <max_angle>2.3562</max_angle>
+        </horizontal>
+      </scan>
+      <range>
+        <min>0.10</min>
+        <max>30.0</max>
+        <resolution>0.03</resolution>
+      </range>
+      <noise>
+        <type>gaussian</type>
+        <mean>0.0</mean>
+        <stddev>0.03</stddev>
+      </noise>
+    </ray>
+    <plugin filename="libgazebo_ros_gpu_laser.so" name="summit_xl_rear_laser_controller">
+      <topicName>rear_laser/scan</topicName>
+      <frameName>/summit_xl_rear_laser_link</frameName>
+      <!-- if not global (leading /) sets the current namespace as a prefix (/ns/name_laser_link) -->
+    </plugin>
+  </sensor>
+</gazebo>
+<transmission name="summit_xl_arm_shoulder_pan_trans">
+  <type>transmission_interface/SimpleTransmission</type>
+  <joint name="summit_xl_arm_shoulder_pan_joint">
+    <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+  </joint>
+  <actuator name="summit_xl_arm_shoulder_pan_motor">
+    <mechanicalReduction>1</mechanicalReduction>
+  </actuator>
+</transmission>
+<transmission name="summit_xl_arm_shoulder_lift_trans">
+  <type>transmission_interface/SimpleTransmission</type>
+  <joint name="summit_xl_arm_shoulder_lift_joint">
+    <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+  </joint>
+  <actuator name="summit_xl_arm_shoulder_lift_motor">
+    <mechanicalReduction>1</mechanicalReduction>
+  </actuator>
+</transmission>
+<transmission name="summit_xl_arm_elbow_trans">
+  <type>transmission_interface/SimpleTransmission</type>
+  <joint name="summit_xl_arm_elbow_joint">
+    <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+  </joint>
+  <actuator name="summit_xl_arm_elbow_motor">
+    <mechanicalReduction>1</mechanicalReduction>
+  </actuator>
+</transmission>
+<transmission name="summit_xl_arm_wrist_1_trans">
+  <type>transmission_interface/SimpleTransmission</type>
+  <joint name="summit_xl_arm_wrist_1_joint">
+    <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+  </joint>
+  <actuator name="summit_xl_arm_wrist_1_motor">
+    <mechanicalReduction>1</mechanicalReduction>
+  </actuator>
+</transmission>
+<transmission name="summit_xl_arm_wrist_2_trans">
+  <type>transmission_interface/SimpleTransmission</type>
+  <joint name="summit_xl_arm_wrist_2_joint">
+    <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+  </joint>
+  <actuator name="summit_xl_arm_wrist_2_motor">
+    <mechanicalReduction>1</mechanicalReduction>
+  </actuator>
+</transmission>
+<transmission name="summit_xl_arm_wrist_3_trans">
+  <type>transmission_interface/SimpleTransmission</type>
+  <joint name="summit_xl_arm_wrist_3_joint">
+    <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+  </joint>
+  <actuator name="summit_xl_arm_wrist_3_motor">
+    <mechanicalReduction>1</mechanicalReduction>
+  </actuator>
+</transmission>
+<gazebo reference="summit_xl_arm_shoulder_link">
+  <selfCollide>true</selfCollide>
+</gazebo>
+<gazebo reference="summit_xl_arm_upper_arm_link">
+  <selfCollide>true</selfCollide>
+</gazebo>
+<gazebo reference="summit_xl_arm_forearm_link">
+  <selfCollide>true</selfCollide>
+</gazebo>
+<gazebo reference="summit_xl_arm_wrist_1_link">
+  <selfCollide>true</selfCollide>
+</gazebo>
+<gazebo reference="summit_xl_arm_wrist_3_link">
+  <selfCollide>true</selfCollide>
+</gazebo>
+<gazebo reference="summit_xl_arm_wrist_2_link">
+  <selfCollide>true</selfCollide>
+</gazebo>
+<gazebo reference="summit_xl_arm_ee_link">
+  <selfCollide>true</selfCollide>
+</gazebo>
+<gazebo reference="summit_xl_wsg50_support_link">
+  <material>Gazebo/Black</material>
+  <gravity>true</gravity>
+</gazebo>
+<gazebo reference="summit_xl_wsg50_base_link">
+  <material>Gazebo/Grey</material>
+  <turnGravityOff>false</turnGravityOff>
+</gazebo>
+<transmission name="summit_xl_wsg50_base_trans_left">
+  <type>pr2_mechanism_model/SimpleTransmission</type>
+  <actuator name="summit_xl_wsg50_base_motor_left">
+    <mechanicalReduction>1</mechanicalReduction>
+    <motorTorqueConstant>1</motorTorqueConstant>
+  </actuator>
+  <joint name="summit_xl_wsg50_finger_left_joint">
+    <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+  </joint>
+</transmission>
+<gazebo reference="summit_xl_wsg50_gripper_left">
+  <material>Gazebo/Blue</material>
+  <turnGravityOff>false</turnGravityOff>
+</gazebo>
+<gazebo reference="summit_xl_wsg50_finger_left">
+  <material>Gazebo/Blue</material>
+  <turnGravityOff>false</turnGravityOff>
+</gazebo>
+<transmission name="summit_xl_wsg50_base_trans_right">
+  <type>pr2_mechanism_model/SimpleTransmission</type>
+  <actuator name="summit_xl_wsg50_base_motor_right">
+    <mechanicalReduction>1</mechanicalReduction>
+    <motorTorqueConstant>1</motorTorqueConstant>
+  </actuator>
+  <joint name="summit_xl_wsg50_finger_right_joint">
+    <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+  </joint>
+</transmission>
+<gazebo reference="gripper_right">
+  <material>Gazebo/White</material>
+  <turnGravityOff>false</turnGravityOff>
+</gazebo>
+<gazebo reference="summit_xl_wsg50_finger_right">
+  <material>Gazebo/White</material>
+  <turnGravityOff>false</turnGravityOff>
+</gazebo>
+<gazebo reference="summit_xl_wrist_rgbd_support_link">
+  <material>Gazebo/Black</material>
+  <gravity>true</gravity>
+</gazebo>
+<gazebo reference="summit_xl_wrist_rgbd_camera_link">
+  <sensor name="summit_xl_wrist_rgbd_depth_sensor" type="depth">
+    <always_on>true</always_on>
+    <update_rate>15.0</update_rate>
+    <camera>
+      <horizontal_fov>1.59174027782</horizontal_fov>
+      <image>
+        <format>R8G8B8</format>
+        <width>640</width>
+        <height>480</height>
+      </image>
+      <clip>
+        <near>0.3</near>
+        <far>10.0</far>
+      </clip>
+    </camera>
+    <plugin filename="libgazebo_ros_openni_kinect.so" name="summit_xl_wrist_rgbd_controller">
+      <cameraName>wrist_rgbd</cameraName>
+      <alwaysOn>true</alwaysOn>
+      <updateRate>10</updateRate>
+      <imageTopicName>rgb/image_raw</imageTopicName>
+      <depthImageTopicName>depth/image_raw</depthImageTopicName>
+      <pointCloudTopicName>depth/points</pointCloudTopicName>
+      <cameraInfoTopicName>rgb/camera_info</cameraInfoTopicName>
+      <depthImageCameraInfoTopicName>depth/camera_info</depthImageCameraInfoTopicName>
+      <frameName>/summit_xl_wrist_rgbd_camera_depth_optical_frame</frameName>
+      <baseline>0.1</baseline>
+      <distortion_k1>0.0</distortion_k1>
+      <distortion_k2>0.0</distortion_k2>
+      <distortion_k3>0.0</distortion_k3>
+      <distortion_t1>0.0</distortion_t1>
+      <distortion_t2>0.0</distortion_t2>
+      <pointCloudCutoff>0.4</pointCloudCutoff>
+    </plugin>
+  </sensor>
+</gazebo>
+</robot>
