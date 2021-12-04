@@ -62,6 +62,8 @@ def generate_launch_description():
 
     return LaunchDescription([
         ros_tcp_endpoint,
+        # model_arg,
+        # robot_state_publisher_node,
         slam,
         nav2,
         rviz_node
