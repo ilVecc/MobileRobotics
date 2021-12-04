@@ -1,2 +1,2 @@
 # MobileRobotics
-Unity simulation of RB-KAIROS robot over ROS2
+Unity simulation of TurtleBot3 Waffle and RB-KAIROS robots over ROS2
