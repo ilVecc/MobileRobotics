@@ -1,5 +1,5 @@
-# MobileRobotics
-Unity simulation of TurtleBot3 Waffle Pi and RB-KAIROS robots over ROS2.
+# Mobile Robotics course @ UNIVR
+_Unity simulation of TurtleBot3 Waffle Pi and RB-KAIROS robots over ROS2._
 
 A report of this project can be found [here](https://www.overleaf.com/read/qfqdpnxpnphg).
 
